@@ -1,0 +1,12 @@
+<?php
+  define('_home', __DIR__);
+  require_once _home."\\compressor\\Functions.php";
+  require_once _home."\\compressor\\JekComp__Core-Compressor.php";
+  require_once _home."\\compressor\\JekComp__Emul.php";
+  require_once _home."\\compressor\\JekComp__Main.php";
+  if (isset($argv[1])) $equation = $argv[1]; else $equation = '10:x';
+
+  $compressor = new Compressor;
+  $compressor->decompress($equation);
+
+  
